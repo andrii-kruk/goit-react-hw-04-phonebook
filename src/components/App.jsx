@@ -28,7 +28,7 @@ export const App = () => {
     const parsedContacts = JSON.parse(storagedContacts) ?? [];
 
     setContacts(parsedContacts);
-  }, [contacts]);
+  }, []);
 
   useEffect(() => {
     if (contacts.length) {
