@@ -21,14 +21,11 @@ export const App = () => {
   );
 
   useEffect(() => {
-    const storagedContacts = localStorage.getItem(
-      'contacts',
-      JSON.stringify(contacts)
-    );
+    const storagedContacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(storagedContacts) ?? [];
 
     setContacts(parsedContacts);
-  }, [contacts]);
+  }, []);
 
   useEffect(() => {
     if (contacts.length) {
